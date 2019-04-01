@@ -55,7 +55,9 @@ Django ``MIDDLEWARE`` setting. Then, add the setting
 ``REFERRER_POLICY``, and set it to one of the acceptable values for
 the ``Referrer-Policy`` header. The legal values are:
 
-* ``'no-referrer'``
+* ``'no-referrer'`` (This can break Django's CSRF protection, see
+  "Removing the Referer header" in the
+  `CSRF docs <https://docs.djangoproject.com/en/2.1/ref/csrf/>`_.)
 * ``'no-referrer-when-downgrade'``
 * ``'origin'``
 * ``'origin-when-cross-origin'``
